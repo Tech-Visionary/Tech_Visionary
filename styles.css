@@ -38,8 +38,10 @@ body {
 #right-side {
   font-family: Arial, sans-serif;
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100vh;
   margin: 0;
   
@@ -99,9 +101,9 @@ body {
   }
   
   .responsive-button {
-    padding: 12px 24px;
+    padding: 20px 34px;
     font-size: 16px;
-    background-color: #3498db;
+    background-color: #1c6b9f;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -113,6 +115,62 @@ body {
     background-color: #2c3e50; /* Change the background color on hover */
     color: #ecf0f1; /* Change the text color on hover */
   }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #welcomesYou h1 {
+    margin-left: 5vw;
+    color: gold;
+    animation: fadeIn 4s ease-out;
+  }
+  .home-sci{
+    position: absolute;
+
+    bottom: 20px;
+    width: 170px;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+  }
+  .home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .home-sci a:hover{
+    color: #081b29;
+ }
+ .home-sci a::before{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 0;
+     height: 100%;
+     background: #00abf0;
+     z-index: -1;
+     transition: .5s;
+ }
+ .home-sci a:hover::before{ 
+   width: 100%;
+ }
 @media screen and (max-width: 800px) {
     /* .navbar {
         background: grey;
@@ -123,12 +181,9 @@ body {
         padding: 10px 20px;
     } */
     body{
-        height: min-content;
-        background-image: url('./cool-white-background-ingbh7qw7if21dkn.jpg');
-        background-repeat: no-repeat;
-        background-size: cover; 
-        background-position: center;
-      }
+        
+        background-color: black;
+    }
     .nav-list {
         width: 100%;
         display: none;
@@ -156,6 +211,7 @@ body {
         background-repeat: no-repeat;
     } */
     #left-side {
+
             border-radius: 2px;
             color: goldenrod;
             margin-top: 10vh;
@@ -165,7 +221,7 @@ body {
             display: flex;
             flex-direction: column;
             text-align:  center;
-            background-color: #f2f2f2;
+            /* background-color: #f2f2f2; */
             /* padding: 20px; */
     }
     #right-side{
@@ -174,8 +230,8 @@ body {
         flex-direction: column;
         height: 100%;
         width: 90%;
-        background-color: white;
-        padding: 20px;
+        /* background-color: white; */
+        padding: 10px;
         text-align: center;
     }
     .image{

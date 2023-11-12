@@ -6,3 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
         navList.classList.toggle("active");
     });
 });
+const textElement = document.getElementById('animatedText');
+    let count = 0;
+
+    setInterval(() => {
+      count++;
+      textElement.textContent = `Hello, I'm animated! (${count})`;
+    }, 1000);
